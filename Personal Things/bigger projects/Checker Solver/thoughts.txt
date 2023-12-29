@@ -1,0 +1,34 @@
+end of 6/10 | 4:30 long session
+Accomplished:
+ - Board can be visualized
+ - Initialize a hashmap connected the possible moves of every piece
+ - Method to move a piece
+
+Things that need to get done:
+ - Recursive method to figure out the best possible move
+    - Figure out how to determine whether a move is good or not
+    - implement depth system
+ - Actual system to play checkers in the terminal
+ - MovePiece method may not work as intended when taking multiple pieces in sequence
+
+
+Hey shaikh from 6/16
+I have no clue what any of this code does. Please write documentation so future future me can make sense of it 
+hugs and kisses -shaikh
+please do it properly and make it make sense and like fix code if necessary pleas pleas pleas epalse
+
+ - Debug canTakePiece() since its static. By doing that figure out a better way to display customize board configs
+ - Finish making the game actually playable even if it is glitchy
+ 
+
+Hey shaikh from 6/16 its shaikh from 6/18
+Worked on this for like an hour, didn't do much documentation though. Largely finished the whole gaming
+loop but can't debug until we fix the initializePotentialMovesList method. Work on the possibleTakeMoves method
+or whatever I decided to call it. It should only look for chain reaction takes. Not sure what else 
+we have to do but hey we'll figure it out as we get there. 
+
+hey its shaikh from 10/12/23
+Yeah I need to add a year in these dates now. Why did shaikh from 6/18 never make documentionat I do NOT remember how 
+any of this works. Now I gotta read through it all again and make sense of your code. Hope you made it easy.
+Best wishes, Shaikh from 101223
+

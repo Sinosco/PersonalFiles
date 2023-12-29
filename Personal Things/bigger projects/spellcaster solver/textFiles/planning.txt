@@ -1,0 +1,61 @@
+What the hell am I actually doing. Why am I doing things without a plan before hand.
+Okay lets use our brain now me.
+
+Goal:
+* Discover the longest possible word from a grid of 5x5 or 25 letters
+
+Necessary elements:
+* Importing a dictionary to compare words
+* Select a letter, then select an adjacent letter, over and over again until it forms a word or fails
+    * if it fails, move on to the next step.
+    * if it succeeds, add it to a list of possible words.
+* Display a LIST of possible words from longest to shortest
+
+Idea behind looking for words:
+* Should be a recursive program. 
+A   B   C   D   E 
+F   G   H   I   J
+K   L   M   N   O
+P   Q   R   S   T
+U   V   W   X   Y
+ - look at 'A'.
+    - Look at B. Then C, that word doesn't exist to recurse back to B and try h
+      that doesn't work so recurse back to B and try G. That doesn't work so...
+      None of those work, AB is not a word, so recurse back to A and try G.
+    - None of A combos work so loop onto B.
+ - Look at 'B'.
+    - Look at A, that works so look F, all adjacent letters of F fail so return back to a
+      Try G, G works so try all adjacents of G, not of them work but B+A+G works so add that
+      to the list.
+    - Recurse back to B, and try all other adjacent letters.
+Loop and recurse through all letters.
+
+Issues:
+ - Checking an adjacent or already used square. Might be able to solve using a boolean grid
+   of whether or not a square is active/used/true.
+
+
+Potential resources:
+ - Look into how people code ai for snake
+
+
+ Pseudo Code:
+ -D Intake letters of board and convert to grid.
+ -D Take that grid and convert it into something that holds all adjacent letters for all letters
+ -D Make a boolean[][] to store whether a grid space is being used or not in a loop
+ - Create a for loop that goes through each letter
+    - when a letter is being checked set that boolean[][] coord true
+ - Recursively check every branching possibility of each loop of grid space.
+    - if a branch of text does not equal a word or the beginning of a word, recurse back.
+    - if a branch ever does equal a word, no matter how small, add it to a list of potential words.
+    - Before proceeding onto a new letter check to make sure it's boolean is false.
+    - When recursion is done set boolean[][] all false.
+ -D Go through list of words and sort it from longest to shortest as well as highest ASCII value
+
+ Idea for recursion:
+ - Instead of using an adjacency matrix, check for every block in a 1 block radius. If that index is
+   negative, simply skip it and move on to the next. Once it does it 8 times then recurse back.
+
+wordExist:
+ - USE BINARY SOMETHING SYSTEM TO FIND WORDS
+ - silly past me doesn't know about HashSets (I don't know how they work either). -5/13 | 11:14PM
